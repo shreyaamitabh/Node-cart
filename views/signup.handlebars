@@ -1,0 +1,57 @@
+
+<head>
+<meta content="width=device-width, initial-scale=1.0" name="viewport" />
+      
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<link rel="stylesheet" href="/Users/shreyaamitabh/Downloads/bootstrap-4.4.1-dist/css/bootstrap.min.css" >
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+      <link rel= "stylesheet" href="../css/login.css">
+</head>
+<style>
+.form{
+	width:500px;
+	height:570px;
+	position:relative;
+	background-color:white;
+	margin:100px auto;
+	border: 1px solid lightgray;
+	box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius:20px;
+	position:relative;
+	}
+</style>
+<body>
+<div class="form">
+    <h1 style="text-align:center; font-family: serif;">Sign up  </h1>
+  
+<form action="/home/Users"  method="post">
+<div class="form-group">
+      <label for="email" id="textemail">Username:</label>
+      <input type="text" class="form-control" id="email" placeholder="Enter your name" required name="Name">
+    </div>
+    <div class="form-group">
+      <label for="email" id="textemail">Email:</label>
+      <input type="email" class="form-control" id="email" onkeyup="getemail(this.value)" placeholder="Enter your email" required name="Email">
+      <p id="eValid"></p>
+    </div>
+    <div class="form-group">
+      <label for="pwd" id="textpwd">Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter your password"  onkeyup="getPass(this.value)" required name="Password">
+       <p id="ePass"></p>
+    </div>
+    <div class="form-group">
+      <label for="pwd" id="textpwd">Confirm Password:</label>
+      <input type="password" class="form-control" id="pwd" placeholder="Enter your password" onkeyup="getCPass(this.value)" required name="CPassword">
+       <p id="cPass"></p>
+    </div>
+    <button type="submit" id="submit" class="btn btn-primary">Submit</button>
+    
+  </form> 
+  </div>
+
+<script src="../js/register.js">
+
+</script>
+</body>

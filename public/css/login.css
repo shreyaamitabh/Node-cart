@@ -1,0 +1,46 @@
+body{
+	background-color: rgb(246, 252, 255);
+	
+}
+.form{
+	width:500px;
+	height:390px;
+	position:relative;
+	background-color:white;
+	margin:100px auto;
+	border: 1px solid lightgray;
+	box-shadow: 0 8px 12px 0 rgba(0, 0, 0, 0.4), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	border-radius:20px;
+	position:relative;
+	}
+#bottomright{
+	display:flex;
+	align-items:flex-end;
+	width:100%;
+	}
+#textemail , #textpwd{
+	margin-left:20px;
+	margin-top:20px;
+	font-size: 20px;
+}
+#email , #pwd, #name, #phone{
+	width:80%;
+	margin-left:20px;
+}
+#rem{
+	margin-left:5px;
+}
+#remme{
+	margin-left:20px;
+}
+#submit{
+	left:0;
+	right:0;
+	position:absolute;
+	margin-left: auto;
+margin-right: auto;
+}
+#eValid, #ePass, #cPass{
+	margin-left: 20px;
+	color:red;
+}

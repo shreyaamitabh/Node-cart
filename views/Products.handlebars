@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/Users/shreyaamitabh/Downloads/bootstrap-4.4.1-dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../css/index.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-md bg-dark navbar-dark fixed-top">
+        <!-- Brand -->
+        <a class="navbar-brand">Home</a>
+        <a class="nav-link" style="color:white;">Support</a>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link">Welcome {{{data.username}}}</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" >My Cart {{session.user}}</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div id="filter">
+        <button class="btn btn-info" onclick="filterChoco()">Chocolates</button>
+        <button class="btn btn-info" onclick="filterCakes()">Cakes</button>
+    </div>
+    <div class="container">
+        <table class="table table-striped">
+            <tbody>
+                {{#each docs}}
+                <tr>
+                    <td> <img class="center" src="{{this.image}}"></img></td>
+                    <td><b class="name">{{this.name}}</b><br>
+                        <b>Price:</b> {{this.price}}<br>
+                        <b>Rating:</b> {{this.rating}}</td>
+                    <td><button class="btn btn-primary mt-5">Add to cart</button></td>
+                </tr>
+                {{/each}}
+            </tbody>
+        </table>
+    </div>
+
+
+    <script>
+        function login() {
+            console.log("hello");
+            $.ajax({
+                url: '/login',
+                success: function (data) {
+                    window.location = "http://localhost:8000/login";
+                }
+            });
+        }
+        function register() {
+            
+            $.ajax({
+                url: '/signup',
+                success: function (data) {
+                    window.location = "http://localhost:8000/signup";
+                }
+            });
+        }
+        function filterChoco() {
+            console.log("hello");
+            $.ajax({
+                url: '/chocolate',
+                success: function (data) {
+                    window.location = "http://localhost:8000/chocolate";
+                }
+            });
+        }
+        function filterCakes() {
+            console.log("hello");
+            $.ajax({
+                url: '/cake',
+                success: function (data) {
+                    window.location = "http://localhost:8000/cake";
+                }
+            });
+        }
+
+    </script>
+</body>
+
+</html>
